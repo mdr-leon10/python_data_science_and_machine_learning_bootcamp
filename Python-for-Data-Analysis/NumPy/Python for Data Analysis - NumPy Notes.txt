@@ -1,0 +1,61 @@
+# Introduction to Numpy
+	# Linear Algebra for python
+	# Installation: pip install numpy
+
+# NumPy Arrays:
+	# 1-d vectors
+	# 2-d Matrix
+	# Create an array from a Python object:
+		1. import numpy as np
+		2. create a list list = [1,2,3]
+		3. arr = np.array(list)
+	# to get a matrix, it is possible to cast a list of lists. the columns will be the elements of the list and the rows will be the different lists
+	# np.arange([start], [stop], stepSize) -> generates an array with the given range
+	# np.zeros((row, columns)) -> it returns an array of zeros with the stipuilated size. if a tuple is passed it will return a matrix, if a single value is passed it will return an array. 
+	# np.ones(value) same as np.zeros but with ones.
+	#np.linspace(start, stop, space) -> returns an array of evenly spaced samples over the given interval. space = number of samples.
+	# np.eye(value) returns a identity matrix
+	# np.random.rand(dimensions) -> random samples of uniform distribution
+	#np.random.randn(dimensions) -> random samples of standard normal distribution centered in 0
+	# np.random.randint(low inclusive, high exclusie, size) -> returns an array of integers between the given range ando of the given size.
+	# array.reshape(new dimensions) -> changes a matrix to a vector or a vector to a matrix.
+	# array.max() & array.min -> returns the max or min value of an array.
+	# array.argmax() -> returns the index position in which the max value if found.
+	# array.argmin() -> returns the index position in which the min value if found.
+	# array.shape returns the shape of the vector. # of columns and rows
+	# array.dtype returns the data type of the array.
+
+# Array Indexing
+	#  Array[index] value in the 'index position'
+	#  Array[start : stop] slice of a array [:stop]/[start:] 
+	# Broadcast: change the value of multiple possitions of an array
+	eg: array[start : stop] = 0, every value in the range position will be changed to zero.
+	# slices of an array are not copied, they are just a view of the array. ]Any modifications of the slice will also modify the original array.
+	# to copy a slice: array_copy = arr.copy()
+# Matrix Indexing
+	# Two formats:
+		# array[row][column]
+		# array[row] returns the entire row
+		# array[row, column]
+		# array [startRow: EndRow, startColumn : endColumn]
+
+# Conditional selection
+	# It is possible to use a comparison operator on an array. This will return an array of booleans that indicates which elements met the conditions and which don´t.
+	# To obtain an array that has only the values that meet the condition it is possible to do arr[condition]
+
+# Numpy Operations
+	# scalar arrays:
+		# It´s posible to do scalar operations over arrays. This will be made by operating element by element ex:
+		arr1 + arr2 = arr1[0] + array2[0], arr1[1] + array2[1], ...etc
+		# possible operations: addition, substraction, multiplicatio
+		# arr + 100: adds 100 to every element in the array
+		# arr - 100: subtracts 100 to every element in the array
+		# arr * 100: multiplies 100 to every element in the array
+		# arr ** 2: squares every element in the array
+		# on certain mathamatical operations Pythopn will give a warning except of an error when dealing with arrays, and the value of the problematic position will be nan or null.
+		# np.sqrt()
+		# np.exp()
+		# np.max()
+		# np.sin()
+		# np.log()
+		# Link of all the functions in the notebook
