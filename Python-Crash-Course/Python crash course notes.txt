@@ -1,0 +1,134 @@
+# Python crash course part 1
+	# Numbers
+	# Interger = 1
+	# Floating point number = 1.0
+	# Addition +
+	# Multiplication *
+	# Division /
+	# Exponents **
+	# Module %
+	# Python taqkes into account the order of operations
+
+# variables:
+	# Name = value
+	# It can´t start with numbers or characters
+
+# Strings 
+	# for comments
+	# '' single quotes for strings
+	# "" double quotes for strings
+	# "''"" quotes can be nested
+	# print() function to display values
+	# .format(p1, p2) allows to replace {} with the parameters.
+	# Strings are indexed so we can access any character by name[position].
+	# slice notation: name[begginingPosition: endPossition] if the first or end position are included it is possible to write [:#] [#:]
+
+# List: [ele1, ele2, ele3]
+	# Lists also use indexes and slices
+	# To change an element in a given position list[pos]
+	#To nest lists: just write the list into the other list, the index in the position where the list was saved will return the list
+	# List() -> returns a list with the parameters passed.
+
+# Python crash course part 2
+
+	#Dictionaries: 
+		# d = {'key': 'value', 'key2': 'value2'}
+		# to obtain the value: d['key']
+		# it is possible to have lists as values, once you obtain the list with the  key, you can use indexation. eg: d {'key' : [1,2,3]} d['key'][1] = 2
+		# Dictionaries can be nested
+
+	# Booleans: 
+		# returns a true or false value
+
+	# Tuples: 
+		# t = (1,2,3)
+		# tuples are inmutable
+		# elements can be obtained with indexes
+
+	# sets:
+		# Collection of unique elements, deletes the reapeted elements
+		# s = {1,2,3,4}
+		# to add elements to a set s.add(element)
+
+	# comparison operators:
+		# > greater than -> boolean
+		# < less than -> boolean
+		# <= less or equal than -> boolean
+		# >= greater or equal then -> boolean
+		# == equality -> boolean
+		# != not equal -> boolean
+		# and -> boolean
+		# or -> boolean
+
+	# conditional statements:
+		# if condition : statement
+		# elif condition: statement
+		# else: statement -> excecutes the code if non of the if and else if conditions are met
+
+# Python crash course part 3
+
+	# For loops:
+		# Iterate through a sequence
+
+	# While loop:
+		# does something until a condition is met
+
+	# Range()
+		# generator of numerical values
+		# range(startValue, endValue)
+		# default value is cero. If we say range(10) it will generate sequence of ten elements starting in 0.
+
+	# List comprehension:
+		# list = [] -> empty list
+		# .append() -> adds elements in a list
+		# List comprehension: newList = [value for statement]
+		# eg: [number**2 for number in list]
+
+	# Functions:
+		# def  name (param1) -> keyword to funtion
+		# they start with lowercase letters
+		# It is possible to have optional parameters by giving a value to the parameter. When the function is called, if the parameter is not passed through the default value will be used.
+		# return -> keyword so the value can be stored in a value
+		# They can have documentation code by using two or three quotes.
+		# In some DEA you can access to this documentation
+		# Functions that only return a value, can be writen as: def name(parm) : return value
+
+# Python crash course part 4
+		# lambda expressions
+			# also known as anonymous function 
+			# Change the def for lambda param : value
+			# can be assigned to a variable. to use it we call the variable and pass the parameters in ()
+			# lambda expressions can be passed as parameters in methods such as map.
+
+		# map and filter
+			# map()
+				# Built-in function that allows to apply a function to every item in an iterable object.
+				# map(function, seq) 
+			# filter()
+				# filter(function, iterable)
+				# returns the elements which return true in the lambda expression or function passed by parameter.
+				# The function or lambda expression must always return a boolean. 
+
+		# methods
+			# String:
+				# .lower() returns the string in lowcases
+				# .upper() returns the string in uppercases
+				# .split() by default it will split the string in whitespaces. ]To change the delimitator pass it by parameter as a string.
+
+		# dictionaries:
+			# .keys() returns all the keys of the dictionaries
+			# .items() returns the items in the dictionary as tuples (key, values)
+			# .values() returns all the valus in the dictionary
+
+		# lists:
+			# .pop() pop and return the last value of the list. The item would not be in the list after. It can be passed an index of the element to pop.
+			# .apped() allows to append a new element to the list.
+			# in -> checks if a value is in the list
+
+		# Tuple unpacking:
+			# Works when iterationg over a list of tuples.
+			# eg x = [(1,2), (3,4), (5,6)] for a,b in x: print (a or b)
+
+
+
+
