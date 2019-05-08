@@ -1,0 +1,53 @@
+﻿# Introduction to Pandas
+	# Open source library built on top of NumPy
+	# It allows for fast analysis and data cleaning and preparation
+	# Has built in visualization features.
+	# Installation: pip install panadas
+# Series
+	# Built on top of NumPy arrays.
+	# They can be indexed by labels.
+	# Import numpy as np
+	# Import pandas as pd
+	# It´s possible to create series by: pd.series(data = list) which will generate a series from the elements of the list and assign a defult index to each element.
+	# It is also possible to say what labels whe want to use pd.series(data = list, index = indexList)
+	# It is possible to generate series from: python lists, python dictionaries and numpy arrays.
+	# A Pandas series can hold different types of data. For example references to functions.
+	# Labels (indexes) allows faster look of the information
+	# To obtain elements: name[label]
+	# the addition of two series return the number of times it finds the element in the same position in the series.
+#Dataframes
+	# np.random.seed() -> get the same random numbers
+	# df = pd.DataFrame(data, index(name of rows), column(name of columns))
+	# columns are series that share the same index
+	# df[column name] returns the column
+	# df.ColumnName also selects the column
+	# df.[[list of name of columns]] returns a dataframe with the columns un the list.
+	# df[nameNewColumn] = what goes inside the column. The dimensions have to match with those of the DataFrame.
+	# df.drop(columnName, axis(0 = index, 1 = columns), inplace(make permanent the changes))
+	# df.shape() -> gives back the shape of a dataframe
+	# df.loc[Name of the index], df.iloc[numericIndex] selecting a row
+	# Selectig subsets df.loc[[list of rows], [list of columns]].
+	# Conditional selection:
+	# dataframeName + condition -> dataframe of boolean
+	# datFrame[dataframeName + condition] -> returns the dataframe subset with the values where the condition is met and NaN where it is not.
+	# df[[series + condition]] returns only the values where the condition is met
+	# It is possible to stack brackets commands ex df[df['w']>0]['x']
+	# It is possible to use several conditions inside the brackets but using the & and | operators.
+	# df.reset_index() the indices will be converted into a column of the data and the indices will become numerical. this function does not occur in place.
+	# dataframe.set_index(nameOfColumn). This function does not occur in place
+	# Multi-index or index hierarchy:a index for each column and a index for groups.
+	# pd.MultiIndex.from_tuples(list of tuples)
+	# list(zip(list1, list2)): returns a list of tuples made from the elements of the lists given by parameter.
+	# To locate multindex: start in the outside in. ex df.loc['group'].loc[element][column]
+	# To name the index: df.index.names = ['name1', 'name2']
+	# Returns a cross sectcion of a dtaframe with multi-level index df.xs('index'), index df.xs(index, level = nameIndexLevel)
+# Missing Data:
+	# np.nan: no vlaue
+	# df.dropna() -> pandas drops any row that has an Nan value. It is possible to change it to do rows by passing axis = 1 as a parameter. thresh: the number of non na values that the rows/columns have to have to not be dropped.
+	# df.fillna(value = 'filler'), it is possible to fill cells with functions.
+# Groupby
+	# Allows you to group together rows based off of a column and perform an aggregate function on them.
+	# To group by column: df.groupby('nameOfTheColumn') and then the function we want to perform in the rows should be called. If there are columns where the function can't be done given the value type of the rows, it would be ignored.
+	# df.groupby('column').describe() gives information of the rows grouped.
+	# .transpose() changes rows to columns and viceversa
+# Merging joining and concatenating
