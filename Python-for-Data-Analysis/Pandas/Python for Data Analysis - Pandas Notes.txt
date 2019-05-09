@@ -51,3 +51,35 @@
 	# df.groupby('column').describe() gives information of the rows grouped.
 	# .transpose() changes rows to columns and viceversa
 # Merging joining and concatenating
+	# pd.concat(list of dataframes) dimensions have to match. Default axis = 0, it joins rows (Matches the columns indexes in the columns)
+	# When there are no values to fill some cell, they would be filled with NaN
+	# To join two dataframes by a giving column we use merge: pd.merge(dataframe1, dataframe2, how = 'sqlMerge', on = ['ColumnD1', 'ColumnD2'])
+	# Joining: merges two dataframes by indexes.
+// Innner join: shared items. Full Join: everything. Right join: all the first table including what is in the second one. Left Join: Everything in the second table including what is in the first table.
+	# Operations
+		# finding unique values
+		#.unique() -> returns an array with the unique values.
+		# .nunique() -> returns the lenght of the array of unique values
+		# .value_counts() -> counts the number of times that a value appears in a dataframe
+	# .apply(function) -> broadcasts the function to each element of the column
+	# df.columns -> returns a list with the name f the columns
+	# df.index -> gives information of th e index
+	#df.sot_values('col2') -> arranges the data by the given column
+	# df.isnull() -> returns a dataframe with true or false if the value in that cell is or not null
+	# pivot table df.pivot_table(values = 'Column', index = [list of index] new index, columns = ['columnName'] the new columns)
+
+# Data input and output
+	# Excel, csv, SQL, html, sql, xlrd
+	# html and sql: sqlalchemy, lxml, html5lib, Beautifulsoup4
+	#pwd location of the notebook
+	# open and read csv files:
+	# pd.read_csv('filename')
+	# df.to_csv('filename', index= false): wont export the index as a column
+	# pd.read_excel('file', sheetname = 'sheetname')
+	# df.to_excel('file', sheet_name = '')
+	# pd.read_html('link') -> makes a list of every table in the link
+	# sql:
+		# from sqlalchemy import create_engine
+		# engine = create_engine('sqlite:///:memory:')
+		# df.to_sql('table', engine)
+		# sqldf = pd.read_sql('my_table', con = engine)
