@@ -15,6 +15,7 @@
 	# Labels (indexes) allows faster look of the information
 	# To obtain elements: name[label]
 	# the addition of two series return the number of times it finds the element in the same position in the series.
+	# integers are converted into doubles to avoid loosing information.
 #Dataframes
 	# np.random.seed() -> get the same random numbers
 	# df = pd.DataFrame(data, index(name of rows), column(name of columns))
@@ -56,11 +57,11 @@
 	# To join two dataframes by a giving column we use merge: pd.merge(dataframe1, dataframe2, how = 'sqlMerge', on = ['ColumnD1', 'ColumnD2'])
 	# Joining: merges two dataframes by indexes.
 // Innner join: shared items. Full Join: everything. Right join: all the first table including what is in the second one. Left Join: Everything in the second table including what is in the first table.
-	# Operations
-		# finding unique values
-		#.unique() -> returns an array with the unique values.
-		# .nunique() -> returns the lenght of the array of unique values
-		# .value_counts() -> counts the number of times that a value appears in a dataframe
+# Operations
+	# finding unique values
+	#.unique() -> returns an array with the unique values.
+	# .nunique() -> returns the lenght of the array of unique values
+	# .value_counts() -> counts the number of times that a value appears in a dataframe
 	# .apply(function) -> broadcasts the function to each element of the column
 	# df.columns -> returns a list with the name f the columns
 	# df.index -> gives information of th e index
